@@ -94,7 +94,7 @@ fn main() {
         let right_index = operator_index - 1;
         let left_index = operator_index - 2;
 
-        let Some(right_nb) = elements .get(right_index) else {
+        let Some(right_nb) = elements.get(right_index) else {
             exit!("Error", 1);
         };
         let Some(right_nb) = right_nb.get_nb().copied() else {
@@ -128,5 +128,8 @@ fn main() {
         elements.remove(right_index);
     }
 
+    if elements.len() != 1 {
+        exit!("Error", 1)
+    }
     println!("{:?}", elements.get(0).unwrap().get_nb().unwrap());
 }

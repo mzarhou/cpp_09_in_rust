@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        ".php_cs": "php",
+        ".php_cs.dist": "php",
+        "vector": "cpp"
+    }
+}
